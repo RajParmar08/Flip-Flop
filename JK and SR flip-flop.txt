@@ -1,0 +1,63 @@
+#Jk flip flop
+# Define the input variables
+J = 0
+K = 0
+clk = 0
+Q = 0
+Qbar = 1
+
+# Define the flip-flop logic
+while True:
+    if clk == 1:
+        if J == 1 and K == 0:
+            Q = 1
+            Qbar = 0
+        elif J == 0 and K == 1:
+            Q = 0
+            Qbar = 1
+        elif J == 1 and K == 1:
+            Q = 1 - Q
+            Qbar = 1 - Qbar
+
+    # Update the input values for the next clock cycle
+    J = int(input("Enter J value: "))
+    K = int(input("Enter K value: "))
+    clk = int(input("Enter clk value: "))
+    
+    # Print the output values
+    print("Q:", Q)
+    print("Qbar:", Qbar)
+
+
+
+
+#SR flip flop
+# Define the input variables
+S = 0
+R = 0
+clk = 0
+Q = 0
+Qbar = 1
+
+# Define the flip-flop logic
+while True:
+    if clk == 1:
+        if S == 1 and R == 0:
+            Q = 1
+            Qbar = 0
+        elif S == 0 and R == 1:
+            Q = 0
+            Qbar = 1
+        elif S == 1 and R == 1:
+            Q = 0
+            Qbar = 0
+
+    # Update the input values for the next clock cycle
+    S = int(input("Enter S value: "))
+    R = int(input("Enter R value: "))
+    clk = int(input("Enter clk value: "))
+    
+    # Print the output values
+    print("Q:", Q)
+    print("Qbar:", Qbar)
+
